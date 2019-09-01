@@ -2,7 +2,7 @@
  * @Author: haobrother 
  * @Date: 2019-08-27 22:30:44 
  * @Last Modified by: haobrother
- * @Last Modified time: 2019-08-28 11:57:13
+ * @Last Modified time: 2019-09-01 17:03:34
  */
 
 const path = require('path');
@@ -77,7 +77,8 @@ module.exports = {
     plugins: [
         // 处理HTML文件
         new HtmlWebpackPlugin({
-            template: './src/index.html'
+            template: './src/index.html',
+            favicon: './favicon.ico'
         }),
         // 独立CSS文件
         new ExtractTextPlugin("css/[name].css"),
@@ -87,7 +88,16 @@ module.exports = {
             filename: 'js/base.js'
         })
     ],
+    resolve: {
+        alias: {
+            page: path.resolve(__dirname, 'src/page'),
+            component: path.resolve(__dirname, 'src/component')
+        }
+    },
     devServer: {
-        port: 8086
+        port: 8086,
+        historyApiFallback: {
+            index: '/dist/index.html'
+        }
     }
 };
