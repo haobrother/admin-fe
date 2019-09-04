@@ -2,7 +2,7 @@
  * @Author: haobrother 
  * @Date: 2019-08-27 22:30:44 
  * @Last Modified by: haobrother
- * @Last Modified time: 2019-09-01 17:03:34
+ * @Last Modified time: 2019-09-02 22:08:09
  */
 
 const path = require('path');
@@ -91,13 +91,25 @@ module.exports = {
     resolve: {
         alias: {
             page: path.resolve(__dirname, 'src/page'),
-            component: path.resolve(__dirname, 'src/component')
+            component: path.resolve(__dirname, 'src/component'),
+            util: path.resolve(__dirname, 'src/util'),
+            service: path.resolve(__dirname, 'src/service')
         }
     },
     devServer: {
         port: 8086,
         historyApiFallback: {
             index: '/dist/index.html'
+        },
+        proxy: {
+            '/manage': {
+                target: 'http://admintest.happymmall.com',
+                changeOrigin: true
+            },
+            '/user/logout.do': {
+                target: 'http://admintest.happymmall.com',
+                changeOrigin: true
+            }
         }
     }
 };
