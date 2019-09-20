@@ -2,7 +2,7 @@
  * @Author: haobrother 
  * @Date: 2019-09-01 21:40:41 
  * @Last Modified by: haobrother
- * @Last Modified time: 2019-09-04 16:00:09
+ * @Last Modified time: 2019-09-11 18:45:26
  */
 
 import MUtil from 'util/mm.jsx'
@@ -22,14 +22,14 @@ class User{
     checkLoginInfo(loginInfo){
         let username = $.trim(loginInfo.username),
             password = $.trim(loginInfo.password);
-        // 判断用户名为空
+        // 判断用户名不为空
         if(typeof username !== 'string' || username.length === 0){
             return {
                 status: false,
                 msg: '用户名不能为空'
             }
         }
-        // 判断密码为空
+        // 判断密码不为空
         if(typeof password !== 'string' || password.length === 0){
             return {
                 status: false,

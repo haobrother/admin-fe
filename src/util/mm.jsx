@@ -2,7 +2,7 @@
  * @Author: haobrother 
  * @Date: 2019-09-01 17:05:31 
  * @Last Modified by: haobrother
- * @Last Modified time: 2019-09-04 09:29:52
+ * @Last Modified time: 2019-09-04 22:17:40
  */
 
 class MUtil{
@@ -44,6 +44,9 @@ class MUtil{
             result = queryString.match(reg);    
         // result: ['param=123', '', '123', '&']
         return result ? decodeURIComponent(result[2]) : null;
+    }
+    successTips(successMsg){
+        alert(successMsg || '操作成功');
     }
     errorTips(errMsg){
         alert(errMsg || '好像哪里不对了');
