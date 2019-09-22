@@ -2,7 +2,7 @@
  * @Author: haobrother 
  * @Date: 2019-09-06 17:52:53 
  * @Last Modified by: haobrother
- * @Last Modified time: 2019-09-20 18:07:03
+ * @Last Modified time: 2019-09-21 17:31:22
  */
 
 import React from 'react';
@@ -135,7 +135,7 @@ class ProductSave extends React.Component{
         return (
             <div>
                 <div id="page-wrapper">
-                    <PageTitle title="添加商品" />
+                    <PageTitle title={this.state.id ? '编辑商品' : '添加商品'} />
                     <div className="form-horizontal">
                         <div className="form-group">
                             <label className="col-md-2 control-label">商品名称</label>

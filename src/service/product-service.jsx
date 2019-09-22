@@ -2,7 +2,7 @@
  * @Author: haobrother 
  * @Date: 2019-09-04 17:47:18 
  * @Last Modified by: haobrother
- * @Last Modified time: 2019-09-11 19:05:19
+ * @Last Modified time: 2019-09-22 10:38:06
  */
 
 import MUtil from 'util/mm.jsx'
@@ -10,7 +10,7 @@ import MUtil from 'util/mm.jsx'
 const _mm = new MUtil();
 
 class Product{
-    // 获取用户列表
+    // 获取商品列表
     getProductList(listParam){
         let url = '',
             data = {};
@@ -102,6 +102,7 @@ class Product{
     /*
     *  品类相关
     */
+   // 根据父品类id获取品类列表
    getCategoryList(parentCategoryId){
         return _mm.request({
             type: 'post',
@@ -109,6 +110,22 @@ class Product{
             data: {
                 categoryId: parentCategoryId || 0
             }
+        });
+   }
+   // 新增品类
+   saveCategory(category){
+        return _mm.request({
+            type: 'post',
+            url: '/manage/category/add_category.do',
+            data: category
+        });
+   }
+   // 修改品类名称
+   updateCategoryName(category){
+        return _mm.request({
+            type: 'post',
+            url: '/manage/category/set_category_name.do',
+            data: category
         });
    }
 }
