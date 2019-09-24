@@ -2,7 +2,7 @@
  * @Author: haobrother 
  * @Date: 2019-09-20 18:02:39 
  * @Last Modified by: haobrother
- * @Last Modified time: 2019-09-20 18:26:21
+ * @Last Modified time: 2019-09-24 12:30:19
  */
 
 import React from 'react';
@@ -57,7 +57,7 @@ class ProductDetail extends React.Component{
         return (
             <div>
                 <div id="page-wrapper">
-                    <PageTitle title="添加商品" />
+                    <PageTitle title="商品详情" />
                     <div className="form-horizontal">
                         <div className="form-group">
                             <label className="col-md-2 control-label">商品名称</label>

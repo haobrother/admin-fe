@@ -2,7 +2,7 @@
  * @Author: haobrother 
  * @Date: 2019-09-21 17:14:13 
  * @Last Modified by: haobrother
- * @Last Modified time: 2019-09-22 10:40:16
+ * @Last Modified time: 2019-09-23 11:40:41
  */
 
 import React from 'react';
@@ -13,6 +13,8 @@ import TableList from 'util/table-list/index.jsx';
 
 import Product from 'service/product-service.jsx';
 import MUtil from 'util/mm.jsx'
+
+import './index.scss';
 
 const _mm = new MUtil();
 const _product = new Product();
