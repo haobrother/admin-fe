@@ -2,7 +2,7 @@
  * @Author: haobrother 
  * @Date: 2019-08-27 22:30:44 
  * @Last Modified by: haobrother
- * @Last Modified time: 2019-09-02 22:08:09
+ * @Last Modified time: 2019-10-29 13:57:27
  */
 
 const path = require('path');
@@ -10,11 +10,14 @@ const webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
+let WEBPACK_ENV = process.env.WEBPACK_ENV || 'dev';
+console.log(WEBPACK_ENV);
+
 module.exports = {
     entry: './src/app.jsx',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        publicPath: '/dist/',
+        publicPath: 'dev' === WEBPACK_ENV ? '/dist/' : '//s.haobrother.top/admin-fe/dist/',
         filename: 'js/app.js'
     },
     module: {
