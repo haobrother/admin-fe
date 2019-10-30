@@ -2,7 +2,7 @@
  * @Author: haobrother 
  * @Date: 2019-09-01 17:40:13 
  * @Last Modified by: haobrother
- * @Last Modified time: 2019-09-02 21:47:17
+ * @Last Modified time: 2019-10-30 15:15:46
  */
 
 import React from 'react';
@@ -23,7 +23,7 @@ class Login extends React.Component{
         }
     }
     componentWillMount(){
-        document.title = '登录 - MMALL ADMIN';
+        document.title = '登录 - HaoMALL管理后台';
     }
     // 当用户输入发生改变
     onInputChange(e){
@@ -65,7 +65,7 @@ class Login extends React.Component{
         return (
             <div className="col-md-4 col-md-offset-4">
                 <div className="panel panel-default login-panel">
-                    <div className="panel-heading">欢迎登录 - MMALL管理后台</div>
+                    <div className="panel-heading">欢迎登录 - HaoMALL管理后台</div>
                     <div className="panel-body">
                         <div>
                             <div className="form-group">

@@ -2,7 +2,7 @@
  * @Author: haobrother 
  * @Date: 2019-09-01 16:09:03 
  * @Last Modified by: haobrother
- * @Last Modified time: 2019-09-01 16:17:59
+ * @Last Modified time: 2019-10-30 15:16:06
  */
 
 import React from 'react';
@@ -12,7 +12,7 @@ class PageTitle extends React.Component{
         super(props);
     }
     componentWillMount(){
-        document.title = this.props.title + ' - HAPPY MMALL';
+        document.title = this.props.title + ' - HaoMALL管理后台';
     }
     render(){
         return (
